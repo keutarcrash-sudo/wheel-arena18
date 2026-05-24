@@ -57,15 +57,9 @@
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       animation: trackShine 3s ease-in-out infinite;
     }
-    @keyframes trackShine {
-      0%,100% { opacity: .4; } 50% { opacity: 1; }
-    }
+    @keyframes trackShine { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
 
-    .stars {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
+    .stars { position: absolute; inset: 0; pointer-events: none; }
     .star {
       position: absolute;
       width: 2px; height: 2px;
@@ -73,9 +67,7 @@
       background: white;
       animation: twinkle var(--d, 3s) var(--delay, 0s) ease-in-out infinite;
     }
-    @keyframes twinkle {
-      0%,100% { opacity: 0; } 50% { opacity: 1; }
-    }
+    @keyframes twinkle { 0%,100% { opacity: 0; } 50% { opacity: 1; } }
 
     .badge {
       position: relative;
@@ -97,10 +89,7 @@
       letter-spacing: -.02em;
       margin-bottom: .5rem;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
 
     .subtitle {
       position: relative;
@@ -117,10 +106,7 @@
       margin-bottom: 1.5rem;
       animation: float 4s ease-in-out infinite;
     }
-    @keyframes float {
-      0%,100% { transform: translateX(0); }
-      50% { transform: translateX(12px); }
-    }
+    @keyframes float { 0%,100% { transform: translateX(0); } 50% { transform: translateX(12px); } }
 
     .cta-btn {
       position: relative;
@@ -161,12 +147,7 @@
     .scroll-hint span { font-size: 1.1rem; }
 
     .section { padding: 5rem 2rem; }
-
-    .features {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
+    .features { max-width: 900px; margin: 0 auto; text-align: center; }
 
     .section-label {
       color: var(--gold);
@@ -196,14 +177,8 @@
       transition: border-color .2s;
     }
     .card:hover { border-color: rgba(201,168,76,.5); }
-
     .card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      margin-bottom: .5rem;
-      color: var(--gold-light);
-    }
+    .card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: .5rem; color: var(--gold-light); }
     .card p { font-size: .85rem; color: var(--muted); line-height: 1.6; }
 
     .booking-section {
@@ -211,13 +186,7 @@
       border-top: 1px solid rgba(201,168,76,.2);
       border-bottom: 1px solid rgba(201,168,76,.2);
     }
-
-    .booking-wrap {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
+    .booking-wrap { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
 
     .form-grid {
       display: grid;
@@ -226,19 +195,12 @@
       margin: 2.5rem 0;
       text-align: left;
     }
-    @media (max-width: 500px) {
-      .form-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 500px) { .form-grid { grid-template-columns: 1fr; } }
 
     .field { display: flex; flex-direction: column; gap: .4rem; }
     .field.full { grid-column: 1 / -1; }
 
-    label {
-      font-size: .7rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
+    label { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
 
     input, select, textarea {
       background: var(--dark3);
@@ -253,105 +215,54 @@
       appearance: none;
     }
     input::placeholder, textarea::placeholder { color: var(--muted); }
-    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
-    select { cursor: pointer; }
+    input:focus, textarea:focus { border-color: var(--gold); }
     textarea { resize: vertical; min-height: 80px; }
 
-    .price-tag {
-      display: inline-flex;
-      align-items: baseline;
-      gap: .5rem;
-      margin: 1.5rem 0;
-    }
-    .price-tag .amount {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--gold-light);
-    }
-    .price-tag .unit {
-      font-size: .85rem;
-      color: var(--muted);
-      letter-spacing: .1em;
-    }
-
-    .disclaimer {
-      font-size: .75rem;
-      color: var(--muted);
-      margin-top: .75rem;
-      font-style: italic;
-    }
+    .price-tag { display: inline-flex; align-items: baseline; gap: .5rem; margin: 1.5rem 0; }
+    .price-tag .amount { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold-light); }
+    .price-tag .unit { font-size: .85rem; color: var(--muted); letter-spacing: .1em; }
+    .disclaimer { font-size: .75rem; color: var(--muted); margin-top: .75rem; font-style: italic; }
 
     .modal-overlay {
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background: rgba(0,0,0,.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-      z-index: 100;
-      opacity: 0;
-      pointer-events: none;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem; z-index: 100;
+      opacity: 0; pointer-events: none;
       transition: opacity .3s;
     }
     .modal-overlay.active { opacity: 1; pointer-events: all; }
-
     .modal {
       background: var(--dark2);
       border: 1px solid var(--gold);
-      max-width: 480px;
-      width: 100%;
-      padding: 3rem 2rem;
-      text-align: center;
+      max-width: 480px; width: 100%;
+      padding: 3rem 2rem; text-align: center;
       transform: translateY(20px);
       transition: transform .3s;
     }
     .modal-overlay.active .modal { transform: translateY(0); }
-
     .modal-icon { font-size: 3.5rem; margin-bottom: 1.5rem; }
-    .modal h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-      color: var(--gold-light);
-    }
+    .modal h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 1rem; color: var(--gold-light); }
     .modal p { font-size: .9rem; color: var(--muted); line-height: 1.7; margin-bottom: .7rem; }
-    .ticket {
-      margin: 1.5rem 0;
-      border: 1px dashed rgba(201,168,76,.4);
-      padding: 1.2rem;
-      text-align: left;
-    }
-    .ticket-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: .8rem;
-      padding: .3rem 0;
-      border-bottom: 1px solid rgba(255,255,255,.05);
-    }
+    .ticket { margin: 1.5rem 0; border: 1px dashed rgba(201,168,76,.4); padding: 1.2rem; text-align: left; }
+    .ticket-row { display: flex; justify-content: space-between; font-size: .8rem; padding: .3rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
     .ticket-row:last-child { border: none; }
     .ticket-row .key { color: var(--muted); }
     .ticket-row .val { color: var(--gold-light); font-weight: 500; }
-
     .modal-close {
       margin-top: 1.5rem;
       background: transparent;
       border: 1px solid var(--gold);
       color: var(--gold);
-      padding: .7rem 2rem;
-      cursor: pointer;
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      padding: .7rem 2rem; cursor: pointer;
+      font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
       transition: background .2s, color .2s;
     }
     .modal-close:hover { background: var(--gold); color: var(--dark); }
 
     footer {
-      padding: 2.5rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: .75rem;
+      padding: 2.5rem; text-align: center;
+      color: var(--muted); font-size: .75rem;
       letter-spacing: .08em;
       border-top: 1px solid rgba(255,255,255,.05);
     }
@@ -364,7 +275,7 @@
 
 <section class="hero">
   <div class="track"></div>
-  <div class="badge">Expérience exclusive · Trajet à vie</div>
+  <div class="badge">Expérience exclusive · 1 seul billet · À vie</div>
   <div class="loco-icon">🚂</div>
   <h1>Locomotive<br><em>Loyauté</em></h1>
   <p class="subtitle">Sur les Rails de l'Amour</p>
@@ -377,7 +288,7 @@
     <p class="section-label">À bord</p>
     <h2 class="section-title">Une expérience sans destination</h2>
     <div class="cards">
-      <div class="card"><div class="card-icon">🛋️</div><h3>Votre espace privé</h3><p>Chaque passagère dispose de son propre wagon. Personne à bord : la locomotive est une privatisation.</p></div>
+      <div class="card"><div class="card-icon">🎫</div><h3>Un seul billet</h3><p>Il n'existe qu'un seul billet pour cette locomotive. Il est pour vous. Il ne sera jamais émis une seconde fois.</p></div>
       <div class="card"><div class="card-icon">📶</div><h3>Wi-Fi &amp; déconnexion</h3><p>Connectivité premium disponible, complétée par des zones de déconnexion pour mieux se retrouver.</p></div>
       <div class="card"><div class="card-icon">🌄</div><h3>Vue imprenable</h3><p>Aussi beau à regarder par la fenêtre qu'à se balader à travers les différents wagons.</p></div>
       <div class="card"><div class="card-icon">♾️</div><h3>Sans terminus</h3><p>Le train de l'amour ne s'arrête jamais. C'est vous qui décidez d'en descendre — ou non.</p></div>
@@ -390,7 +301,7 @@
 <section class="booking-section" id="booking">
   <div class="booking-wrap">
     <p class="section-label">Réservation</p>
-    <h2 class="section-title">Embarquer pour la vie</h2>
+    <h2 class="section-title">L'unique billet disponible</h2>
     <div class="price-tag">
       <span class="amount">Gratuit</span>
       <span class="unit">/ à vie · tout inclus</span>
@@ -401,11 +312,11 @@
         <div class="field"><label for="nom">Nom</label><input type="text" id="nom" placeholder="…" required></div>
         <div class="field"><label for="depart">Gare de départ</label><input type="text" id="depart" placeholder="Ici et maintenant" required></div>
         <div class="field"><label for="destination">Destination</label><input type="text" id="destination" value="Aucune — voyage perpétuel" readonly></div>
-        <div class="field full"><label for="classe">Classe choisie</label><select id="classe"><option>Wagon Loyauté — Privatisation complète</option><option>Wagon Confiance — Vue panoramique</option><option>Wagon Complicité — Accès Wi-Fi premium</option></select></div>
+        <div class="field full"><label for="classe">Classe</label><input type="text" id="classe" value="Wagon Loyauté — Privatisation exclusive" readonly></div>
         <div class="field full"><label for="message">Un mot pour le conducteur (optionnel)</label><textarea id="message" placeholder="Tout ce que vous voudrez bien lui confier…"></textarea></div>
       </div>
       <button type="submit" class="cta-btn">Confirmer mon embarquement</button>
-      <p class="disclaimer">* Billet valable à vie. Non remboursable. Souffrances à la descente comprises.</p>
+      <p class="disclaimer">* Dernier billet disponible. Non remboursable. Souffrances à la descente comprises.</p>
     </form>
   </div>
 </section>
@@ -420,13 +331,13 @@
     <div class="modal-icon">🎫</div>
     <h2>Billet confirmé !</h2>
     <p>Bienvenue à bord, <strong id="modalName" style="color:var(--gold-light)"></strong>.</p>
-    <p>Votre place dans la locomotive <em>Loyauté</em> vous attend.</p>
+    <p>Vous êtes <em>l'unique passagère</em> de la locomotive <em>Loyauté</em>.</p>
     <div class="ticket">
       <div class="ticket-row"><span class="key">Train</span><span class="val">LOYAUTÉ 001</span></div>
       <div class="ticket-row"><span class="key">Départ</span><span class="val" id="modalDepart"></span></div>
       <div class="ticket-row"><span class="key">Destination</span><span class="val">Inconnue ♾️</span></div>
       <div class="ticket-row"><span class="key">Durée</span><span class="val">À vie</span></div>
-      <div class="ticket-row"><span class="key">Classe</span><span class="val" id="modalClasse"></span></div>
+      <div class="ticket-row"><span class="key">Passagers</span><span class="val">1 — vous uniquement</span></div>
       <div class="ticket-row"><span class="key">Prix</span><span class="val">Gratuit (cœur compris)</span></div>
     </div>
     <p style="font-size:.8rem;font-style:italic">Le conducteur vous souhaite un bon voyage.<br>La trentaine ne s'use pas sur les rails du bonheur.</p>
@@ -455,10 +366,8 @@
     const prenom = document.getElementById('prenom').value.trim() || 'Voyageur';
     const nom = document.getElementById('nom').value.trim();
     const depart = document.getElementById('depart').value.trim() || 'Ici et maintenant';
-    const classe = document.getElementById('classe').value;
     document.getElementById('modalName').textContent = prenom + (nom ? ' ' + nom : '');
     document.getElementById('modalDepart').textContent = depart;
-    document.getElementById('modalClasse').textContent = classe.split('—')[0].trim();
     overlay.classList.add('active');
   });
 
