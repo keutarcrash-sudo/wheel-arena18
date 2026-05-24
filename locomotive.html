@@ -364,7 +364,7 @@
 
 <section class="hero">
   <div class="track"></div>
-  <div class="badge">Expérience exclusive · Trajet à vie</div>
+  <div class="badge">Expérience exclusive · 1 seul billet · À vie</div>
   <div class="loco-icon">🚂</div>
   <h1>Locomotive<br><em>Loyauté</em></h1>
   <p class="subtitle">Sur les Rails de l'Amour</p>
@@ -377,7 +377,7 @@
     <p class="section-label">À bord</p>
     <h2 class="section-title">Une expérience sans destination</h2>
     <div class="cards">
-      <div class="card"><div class="card-icon">🛋️</div><h3>Votre espace privé</h3><p>Chaque passagère dispose de son propre wagon. Personne à bord : la locomotive est une privatisation.</p></div>
+      <div class="card"><div class="card-icon">🎫</div><h3>Un seul billet</h3><p>Il n'existe qu'un seul billet pour cette locomotive. Il est pour vous. Il ne sera jamais émis une seconde fois.</p></div>
       <div class="card"><div class="card-icon">📶</div><h3>Wi-Fi &amp; déconnexion</h3><p>Connectivité premium disponible, complétée par des zones de déconnexion pour mieux se retrouver.</p></div>
       <div class="card"><div class="card-icon">🌄</div><h3>Vue imprenable</h3><p>Aussi beau à regarder par la fenêtre qu'à se balader à travers les différents wagons.</p></div>
       <div class="card"><div class="card-icon">♾️</div><h3>Sans terminus</h3><p>Le train de l'amour ne s'arrête jamais. C'est vous qui décidez d'en descendre — ou non.</p></div>
@@ -390,7 +390,7 @@
 <section class="booking-section" id="booking">
   <div class="booking-wrap">
     <p class="section-label">Réservation</p>
-    <h2 class="section-title">Embarquer pour la vie</h2>
+    <h2 class="section-title">L'unique billet disponible</h2>
     <div class="price-tag">
       <span class="amount">Gratuit</span>
       <span class="unit">/ à vie · tout inclus</span>
@@ -401,11 +401,11 @@
         <div class="field"><label for="nom">Nom</label><input type="text" id="nom" placeholder="…" required></div>
         <div class="field"><label for="depart">Gare de départ</label><input type="text" id="depart" placeholder="Ici et maintenant" required></div>
         <div class="field"><label for="destination">Destination</label><input type="text" id="destination" value="Aucune — voyage perpétuel" readonly></div>
-        <div class="field full"><label for="classe">Classe choisie</label><select id="classe"><option>Wagon Loyauté — Privatisation complète</option><option>Wagon Confiance — Vue panoramique</option><option>Wagon Complicité — Accès Wi-Fi premium</option></select></div>
+        <div class="field full"><label for="classe">Classe</label><input type="text" id="classe" value="Wagon Loyauté — Privatisation exclusive" readonly></div>
         <div class="field full"><label for="message">Un mot pour le conducteur (optionnel)</label><textarea id="message" placeholder="Tout ce que vous voudrez bien lui confier…"></textarea></div>
       </div>
       <button type="submit" class="cta-btn">Confirmer mon embarquement</button>
-      <p class="disclaimer">* Billet valable à vie. Non remboursable. Souffrances à la descente comprises.</p>
+      <p class="disclaimer">* Dernier billet disponible. Non remboursable. Souffrances à la descente comprises.</p>
     </form>
   </div>
 </section>
@@ -420,13 +420,13 @@
     <div class="modal-icon">🎫</div>
     <h2>Billet confirmé !</h2>
     <p>Bienvenue à bord, <strong id="modalName" style="color:var(--gold-light)"></strong>.</p>
-    <p>Votre place dans la locomotive <em>Loyauté</em> vous attend.</p>
+    <p>Vous êtes <em>l'unique passagère</em> de la locomotive <em>Loyauté</em>.</p>
     <div class="ticket">
       <div class="ticket-row"><span class="key">Train</span><span class="val">LOYAUTÉ 001</span></div>
       <div class="ticket-row"><span class="key">Départ</span><span class="val" id="modalDepart"></span></div>
       <div class="ticket-row"><span class="key">Destination</span><span class="val">Inconnue ♾️</span></div>
       <div class="ticket-row"><span class="key">Durée</span><span class="val">À vie</span></div>
-      <div class="ticket-row"><span class="key">Classe</span><span class="val" id="modalClasse"></span></div>
+      <div class="ticket-row"><span class="key">Passagers</span><span class="val">1 — vous uniquement</span></div>
       <div class="ticket-row"><span class="key">Prix</span><span class="val">Gratuit (cœur compris)</span></div>
     </div>
     <p style="font-size:.8rem;font-style:italic">Le conducteur vous souhaite un bon voyage.<br>La trentaine ne s'use pas sur les rails du bonheur.</p>
@@ -455,10 +455,8 @@
     const prenom = document.getElementById('prenom').value.trim() || 'Voyageur';
     const nom = document.getElementById('nom').value.trim();
     const depart = document.getElementById('depart').value.trim() || 'Ici et maintenant';
-    const classe = document.getElementById('classe').value;
     document.getElementById('modalName').textContent = prenom + (nom ? ' ' + nom : '');
     document.getElementById('modalDepart').textContent = depart;
-    document.getElementById('modalClasse').textContent = classe.split('—')[0].trim();
     overlay.classList.add('active');
   });
 
